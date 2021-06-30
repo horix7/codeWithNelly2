@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +8,218 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(44, 44, 44);
+  text-align: center;
+  align-items: center;
 }
 
+.main-bg {
+  margin-top: 10vh;
+  width: 90vw;
+  height: 50%;
+}
+
+.section {
+  height: 60vh;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.album {
+  color: blue;
+}
+
+.home-message {
+  color: white;
+  margin: 50px;
+  font-weight: bold;
+  font-size: x-large;
+  text-transform: uppercase;
+}
+.challenge {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  padding: 10px;
+}
+
+.challenge img {
+  border-radius: 50%;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.search-box {
+  background-color: rgb(29, 29, 29);
+  width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 100px;
+}
+
+.go {
+  background-color: darkblue;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  display: absolute;
+  font-weight: bold;
+  font-size: 11px;
+  border: 10px solid rgb(29, 29, 29);
+  border-radius: 50%;
+  height: 100px;
+}
+
+.search-input {
+  background-color: rgb(29, 29, 29);
+  border: none;
+  padding: 20px;
+  width: 400px;
+  height: 50px;
+  color: white;
+  outline: none;
+  font-size: xx-large;
+  transition: padding 0.3s;
+}
+
+.search-input::placeholder {
+  font-size: medium;
+}
+.search-input:hover, .search-input:focus {
+  padding-left: 35px;
+}
+
+.nav {
+  top: 0;
+  background-color: rgba(216, 216, 216, 0.89);
+}
+
+.challenge p {
+  font-size: x-small;
+}
+
+.challenge h2 {
+  font-size: large;
+}
+
+.imageHolder {
+  max-width: 300px;
+  cursor: pointer;
+  min-height: 300px;
+  max-height: 400px;
+  background-color: rgba(0, 0, 0, 0.288);
+  padding: 5px;
+  margin: 10px;
+  text-align: start;
+  border-radius: 10px;
+}
+
+.imageHolder img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.imageHolder p {
+  font-size: medium;
+  color: white;
+}
+
+.flex-images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 120px 0;
+  justify-content: center;
+  justify-items: center;
+}
+
+.loader {
+  border: 1px solid transparent; 
+  border-left: 7px solid white; 
+  border-radius: 70%;
+  width: 60px;
+  padding: 2px;
+  height: 60px;
+  animation: spin 0.48s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .nav {
+    grid-template-columns: 1fr;
+  }
+
+  .challenge {
+    display: none;
+  }
+
+  .search-box {
+    width: 100%;
+    min-width: 200px;
+  }
+
+  .search-input {
+    background-color: rgb(29, 29, 29);
+    width: 200%;
+    height: 40px;
+    color: white;
+    outline: none;
+  }
+
+  .search-input::placeholder {
+    font-size: small;
+  }
+
+  .search-box {
+    height: 20px;
+    grid-template-columns: 1fr 100px;
+  }
+
+  .nav {
+    background-color: transparent;
+  }
+
+  .challenge {
+    display: none;
+  }
+  
+
+  .go {
+    font-weight: bold;
+    font-size: x-small;
+    border: 10px solid rgb(29, 29, 29);
+    border-radius: 50%;
+    /* padding: 10px; */
+    font-size: 3;
+    height: 100px;
+  }
+  
 }
