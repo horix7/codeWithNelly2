@@ -36,7 +36,10 @@ export default class SearchBox extends Component {
         <Fragment>
             <div className="nav">
               <div className="search-box">
-                <input type="text" placeholder="type album id to fetch images" onChange={this.handleSearchInput} className="search-input"/>
+                <input type="text" onKeyDown={(event) => {
+                   if(event.key === "Enter") {
+                        this.fetchAlbumPhotos()
+                    } placeholder="type album id to fetch images" onChange={this.handleSearchInput} className="search-input"/>
                 <button className="go" onClick={this.fetchAlbumPhotos}>
                     {this.state.loading ? <div className="loader"> </div>: "Get Album Photos By Id"}
                 </button>
